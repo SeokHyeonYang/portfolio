@@ -26,42 +26,44 @@
   </head>
   <body>
     <!-- Navbar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <i class="fas fa-meteor"></i>
-        <a href="#">Yang</a>
-      </div>
+    <div class="home__background">
+      <nav id="navbar">
+        <div class="navbar__logo">
+          <i class="fas fa-meteor"></i>
+          <a href="#">Yang</a>
+        </div>
 
-      <ul>
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item active">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">My work</li>
-          <li class="navbar__menu__item">Testimonials</li>
-          <li class="navbar__menu__item">Contact</li>
+        <ul>
+          <ul class="navbar__menu">
+            <li class="navbar__menu__item active">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonials</li>
+            <li class="navbar__menu__item">Contact</li>
+          </ul>
         </ul>
-      </ul>
-    </nav>
+      </nav>
 
-    <!-- Home -->
-    <section id="home">
-      <img
-        src="./img/portfolio.jpg"
-        alt="Yang's profile Photo"
-        class="home__avatar"
-      />
-      <h1 class="home__title">
-        Hello, <br />
-        I'm YangSeokHyeon
-      </h1>
-      <h2 class="home__description">
-        Future-oriented developers who cross the front and back ends.
-      </h2>
-      <button class="home__contact">CONTACT ME</button>
-    </section>
+      <!-- Home -->
+      <section id="home">
+        <img
+          src="./img/portfolio.jpg"
+          alt="Yang's profile Photo"
+          class="home__avatar"
+        />
+        <h1 class="home__title">
+          Hello, <br />
+          I'm YangSeokHyeon
+        </h1>
+        <h2 class="home__description">
+          Future-oriented developers who cross the front and back ends.
+        </h2>
+        <button class="home__contact">CONTACT ME</button>
+      </section>
+    </div>
     <!-- About me -->
-    <section id="about">
+    <section id="about" class="section">
       <h1>About Me</h1>
       <p>
         I haven't experienced development in the field yet, but I've experienced
@@ -70,27 +72,27 @@
         working hard and developing to find creativity and future-oriented
         images in the future.
       </p>
-      <div class="about__major">
+      <div class="about__majors">
         <div class="major">
           <div class="major__icon">
             <i class="fab fa-html5"></i>
           </div>
-          <div class="major__title">Front-end</div>
-          <div class="major__description">HTML, CSS</div>
-          <div class="major">
-            <div class="major__icon">
-              <i class="fab fa-js-square"></i>
-            </div>
-            <div class="major__title">JavaScript</div>
-            <div class="major__description">Vanila JavaScript</div>
+          <h2 class="major__title">Front-end</h2>
+          <p class="major__description">HTML, CSS</p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-js-square"></i>
           </div>
-          <div class="major">
-            <div class="major__icon">
-              <i class="fab fa-react"></i>
-            </div>
-            <div class="major__title">React.js</div>
-            <div class="major__description">React.js</div>
+          <h2 class="major__title">JavaScript</h2>
+          <p class="major__description">Vanila JavaScript</p>
+        </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-react"></i>
           </div>
+          <h2 class="major__title">React.js</h2>
+          <p class="major__description">React.js</p>
         </div>
       </div>
       <div class="about__jobs">
@@ -100,18 +102,24 @@
             alt="university"
             class="job__logo"
           />
-          <p class="job__name">DongSeo university Computer engineer Student</p>
-          <p class="job__preiod">2017.03 ~ Until now</p>
+          <div class="job__description">
+            <p class="job__name">
+              DongSeo university Computer engineer Student
+            </p>
+            <p class="job__preiod">2017.03 ~ Until now</p>
+          </div>
         </div>
         <div class="job">
           <img src="./img/jobs/logo.png" alt="SWuniversity" class="job__logo" />
-          <p class="job__name">DongSeo university Software Student</p>
-          <p class="job__preiod">2019.03 ~ 2019.08</p>
+          <div class="job__description">
+            <p class="job__name">DongSeo university Software Student</p>
+            <p class="job__preiod">2019.03 ~ 2019.08</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -199,7 +207,7 @@
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My work</h1>
       <h3>Project</h3>
       <div class="work__categories">
@@ -266,7 +274,7 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
       <h1>Testimonials</h1>
       <h3>See what they say about me</h3>
       <div class="testimonials">
@@ -303,7 +311,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">seokhyeonyang980113@gmail.com</h2>
       <div class="contact__links">
