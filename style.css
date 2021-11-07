@@ -2,7 +2,7 @@
 
 :root {
   /* Color */
-  --color-dark-blue: #3174f4;
+  --color-mint: #87a5d5;
   --color-black: #4d4d4d;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
@@ -51,6 +51,17 @@ ul {
   padding-left: 0;
 }
 
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -84,7 +95,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-mint);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -112,4 +123,33 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-blue);
+}
+
+/* Home */
+#home {
+  background: url(./img/cool-background.png) center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
