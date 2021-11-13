@@ -14,6 +14,7 @@
   --color-white: #ffffff;
   --color-darkdarkblue: #558fc3;
   --color-sky: #8197e4;
+  --color-light-white: #ecebec;
 
   /* Font size */
 
@@ -386,4 +387,50 @@ p {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-light-grey);
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+}
+
+.testimonials__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.testimonials__avatar:nth-child(odd) {
+  /*  홀 수 일때*/
+  margin-right: 40px;
+}
+
+.testimonials__avatar:nth-child(even) {
+  /*  짝 수 일때*/
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background-color: white;
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-darkdarkblue);
 }
