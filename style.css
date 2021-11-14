@@ -100,11 +100,13 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  width: 100%;
 }
 
 .navbar__menu {
@@ -139,10 +141,17 @@ p {
   color: var(--color-white);
   display: none;
 }
+/* 스크롤을 내렸을 때 navbar 상태 */
+#navbar.navbar--dark {
+  background-color: var(--color-light-blue);
+  padding: 8px;
+  transition: all var(--animation-duration) ease-in-out;
+}
 
 /* Home */
 #home {
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
