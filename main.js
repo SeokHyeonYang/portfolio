@@ -29,10 +29,18 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return; // 아무것도 하지 않는다.
   }
-  console.log(event.target.dataset.link);
-
-  // 스크롤을 누를 시 해당 부분으로 이동
-  const scrollTo = document.querySelector(link);
-  // 스크롤 시 이동하는 데 옵션을 추가 -> 스무스
-  scrollTo.scrollIntoView({ behavior: "smooth" });
+  scrollIntoView(link);
 });
+
+// handle click on "contact me" button on home
+const homeContactBtn = document.querySelector(".home__contact");
+homeContactBtn.addEventListener("click", () => {
+  scrollIntoView("#contact");
+});
+
+// 반복되는 함수는 하나로 정리해두기
+// selector를 받아오면 그것에 대한 것을 찾아간다.
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
