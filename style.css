@@ -131,6 +131,15 @@ p {
   background-color: var(--color-darkblue);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /* Home */
 #home {
   padding: 40px;
@@ -458,4 +467,48 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 38px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .work__categories {
+    flex-direction: column;
+  }
+
+  /* 화면이 작으면 딱 맞게 커지도록 */
+  .project {
+    flex-grow: 1;
+  }
+
+  .testimonials__avatar {
+    width: 80px;
+    height: 80px;
+  }
 }
