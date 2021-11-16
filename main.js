@@ -35,6 +35,7 @@ navbarMenu.addEventListener("click", (event) => {
 // home에서 "contact me" button 을 클릭합니다.
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", () => {
+  // 스크롤이 그쪽으로 바로 이동한다.
   scrollIntoView("#contact");
 });
 
@@ -45,6 +46,24 @@ const homeheight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   // 투명도를 정하는 공식
   home.style.opacity = 1 - window.scrollY / homeheight;
+});
+
+// 스크롤을 아래로 내릴 때 arrow-up 버튼을 보여준다.
+const arrowUp = document.querySelector(".arrow-up");
+
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeheight / 2) {
+    // classList => 없으면 있게 , 있으면 없게 하는 함수
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+// Handle click on the "arrow-up" button
+document.addEventListener("click", () => {
+  //버튼을 누를때 홈으로 이동
+  scrollIntoView("#home");
 });
 
 // 반복되는 함수는 하나로 정리해두기
