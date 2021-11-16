@@ -6,8 +6,8 @@ const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
-  console.log(`navbarHeight : ${navbarHeight}`);
+  //  console.log(window.scrollY);
+  //  console.log(`navbarHeight : ${navbarHeight}`);
 
   // 만약 윈도우의 스크롤이 navbar의 높이보다 클 시
   if (window.scrollY > navbarHeight) {
@@ -32,10 +32,19 @@ navbarMenu.addEventListener("click", (event) => {
   scrollIntoView(link);
 });
 
-// handle click on "contact me" button on home
+// home에서 "contact me" button 을 클릭합니다.
 const homeContactBtn = document.querySelector(".home__contact");
 homeContactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
+});
+
+// 아래로 스크롤 되면서 점점 투명해지게 한다.
+const home = document.querySelector(".home__container");
+const homeheight = home.getBoundingClientRect().height;
+
+document.addEventListener("scroll", () => {
+  // 투명도를 정하는 공식
+  home.style.opacity = 1 - window.scrollY / homeheight;
 });
 
 // 반복되는 함수는 하나로 정리해두기
