@@ -61,9 +61,42 @@ document.addEventListener("scroll", () => {
 });
 
 // Handle click on the "arrow-up" button
-document.addEventListener("click", () => {
+arrowUp.addEventListener("click", () => {
   //버튼을 누를때 홈으로 이동
   scrollIntoView("#home");
+});
+
+//Projects
+// my work의 상단 버튼
+const workBtnContainer = document.querySelector(".work__categories");
+// my work의 하단 이미지 프로젝트
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (e) => {
+  // 데이터의 필터를 누르는데 안에 스팬이 있어 필터영역에 들어가지 않을 경우
+  // 부모노드의 필터를 빌려 쓴다.
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+  // 애니메이션 효과를 위한 클래스 추가
+  projectContainer.classList.add("anime-out");
+  // prijects array의 아이템을 for each를 통해 하나당 각각 번갈아 가면서  하나씩 해준다
+  // 몇초의 시간이 흐른 뒤 다시 anime-out을 없애줘야 한다.
+  // 지워주지 않으면 계속 anime-out 상태를 유지하게 된다.
+  // 0.3초가 지나면 첫번쨰 인자인 {} 함수를 부른다.
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filter === "*" || project.dataset.type === filter) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anime-out");
+  }, 300);
 });
 
 // 반복되는 함수는 하나로 정리해두기
