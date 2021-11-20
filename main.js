@@ -29,7 +29,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return; // 아무것도 하지 않는다.
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 // home에서 "contact me" button 을 클릭합니다.
