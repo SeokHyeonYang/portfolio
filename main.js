@@ -80,6 +80,15 @@ workBtnContainer.addEventListener("click", (e) => {
   if (filter == null) {
     return;
   }
+
+  // 이전 항목에서 선택을 제거하고 새 항목을 선택합니다.
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected"); // class의 selected를 없애준다.
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  // 클릭된 것이 버튼이면 그대로 쓰고 아니면 (스팬일 경우) parentNode = button이니깐 버튼을 쓴다.
+  target.classList.add("selected"); //현재 선택된 아이 -> e.target
+
   // 애니메이션 효과를 위한 클래스 추가
   projectContainer.classList.add("anime-out");
   // prijects array의 아이템을 for each를 통해 하나당 각각 번갈아 가면서  하나씩 해준다
